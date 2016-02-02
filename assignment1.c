@@ -35,10 +35,18 @@ int main(int argc, char *argv[]){
 
         puts("P0: this is the parent process");
 
+
+	char* whaleString = calloc(sizeof(char),100);
+	putenv("WHALE=7");
+	whaleString = getenv("WHALE");
+
+	printf("P0: WHALE is equal to  %s \n", whaleString);
+
 	if(hostName) free(hostName);
 	if(userID) free(userID);
 	//if(time) free(time);
 	if(directory) free(directory);
+	//if(whaleString) free(whaleString);
 
         return 0;
 }
