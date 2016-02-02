@@ -33,12 +33,6 @@ int main(int argc, char *argv[]){
 
 	printf("P0: Current Directory: %s \n", directory);
 
-       // puts(getpid());
-       // puts(getppid());
-       // puts(gethostname());
-       // puts(cuserid());
-       // puts(ctime());
-       // puts(getcwd());
         puts("P0: this is the parent process");
 
 	if(hostName) free(hostName);
