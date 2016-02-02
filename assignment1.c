@@ -16,8 +16,8 @@ int main(int argc, char *argv[]){
 	cuserid(userID);
 
 	char* time = calloc(sizeof(char),100);
-	time_t* tempTime;
-	time = ctime(tempTime);
+	time_t tempTime;
+	time = ctime(&tempTime);
 
 	char* directory = calloc(sizeof(char),100);
 	getcwd(directory, 100);
@@ -43,7 +43,7 @@ int main(int argc, char *argv[]){
 
 	if(hostName) free(hostName);
 	if(userID) free(userID);
-	if(time) free(time);
+	//if(time) free(time);
 	if(directory) free(directory);
 
         return 0;
